@@ -113,10 +113,14 @@ ul {
   border-bottom: var(--header-bottom-border) 1px solid;
 }
 
+
 .icon-envelope,
 .icon-smartphone {
   fill: var(--paragraph-color);
 }
+
+.tel-ref:hover .icon-smartphone,
+.email-ref:hover .icon-envelope,
 .icon-envelope:hover,
 .icon-smartphone:hover {
   fill: var(--click-color);
@@ -545,9 +549,13 @@ img {
   background-color: var(--click-color);
 }
 .social-link-icon:hover .insta,
+.social-link-icon:focus .insta,
 .social-link-icon:hover .twitter,
+.social-link-icon:focus .twitter,
 .social-link-icon:hover .facebook,
-.social-link-icon:hover .linkedn {
+.social-link-icon:focus .facebook,
+.social-link-icon:hover .linkedn,
+.social-link-icon:focus .linkedn {
   fill: var(--main-bg-color);
 }
 .footer-container {
