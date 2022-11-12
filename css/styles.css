@@ -113,7 +113,6 @@ ul {
   border-bottom: var(--header-bottom-border) 1px solid;
 }
 
-
 .icon-envelope,
 .icon-smartphone {
   fill: var(--paragraph-color);
@@ -123,6 +122,16 @@ ul {
 .email-ref:hover .icon-envelope,
 .icon-envelope:hover,
 .icon-smartphone:hover {
+  fill: var(--click-color);
+}
+
+.icon-envelope:focus,
+.icon-smartphone:focus {
+  fill: var(--click-color);
+}
+
+.tel-ref:focus .icon-smartphone,
+.email-ref:focus .icon-envelope {
   fill: var(--click-color);
 }
 
@@ -139,14 +148,6 @@ img {
 .nav-menu--page:focus,
 .nav-menu-contacts:hover,
 .nav-menu-contacts:focus,
-.tel-ref:hover,
-.tel-ref:focus,
-.email-ref:hover,
-.email-ref:focus,
-.tel-ref.footer:hover,
-.tel-ref.footer:focus,
-.email-ref.footer:hover,
-.email-ref.footer:focus,
 .address:hover,
 .address:focus {
   color: var(--click-color);
@@ -161,6 +162,19 @@ img {
   display: flex;
   margin-left: auto;
 }
+
+.tel-ref:hover,
+.tel-ref:focus,
+.email-ref:hover,
+.email-ref:focus,
+.tel-ref.footer:hover,
+.tel-ref.footer:focus,
+.email-ref.footer:hover,
+.email-ref.footer:focus {
+  color: var(--click-color);
+  cursor: pointer;
+}
+
 .main-section {
   max-width: 1600px;
   padding-top: 200px;
@@ -502,17 +516,26 @@ img {
   background-repeat: no-repeat;
 }
 .clients-icon {
-  fill: #afb1b8;
+  fill: var(--clients-logo-color);
 }
 
 .clients-link:hover,
 .clients-link:focus {
+ 
   border: 1px solid var(--click-color);
 }
 .clients-icon:hover,
 .clients-icon:focus {
   fill: var(--click-color);
 }
+
+.clients-link:hover .clients-icon {
+  fill: var(--click-color);
+}
+
+.clients-link:focus .clients-icon {
+  fill: var(--click-color);
+} 
 
 .staffer-social-links {
   display: flex;
